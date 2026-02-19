@@ -22,7 +22,7 @@ document.getElementById("themeBtn").addEventListener("click", function() {
 // Секція 12 — Показати/сховати пояснення
 document.getElementById("toggleBtn").addEventListener("click", function() {
   const box = document.getElementById("explanation");
-  const isHidden = box.style.display === "none";
-  box.style.display = isHidden ? "block" : "none";
-  this.textContent = isHidden ? "Сховати пояснення" : "Показати пояснення";
+  box.classList.toggle("hidden");
+  const isHidden = box.classList.contains("hidden");
+  this.textContent = isHidden ? "Показати пояснення" : "Сховати пояснення";
 });

@@ -29,6 +29,16 @@ body.dark .code {
   background: #111;
 }
 
+body.dark nav {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark nav a {
+  background: #333;
+  color: #ccc;
+}
+
 /* Header */
 header {
   background: #222;
@@ -56,11 +66,6 @@ nav {
   z-index: 10;
 }
 
-body.dark nav {
-  background: #2a2a2a;
-  border-color: #444;
-}
-
 nav a {
   text-decoration: none;
   color: #555;
@@ -68,11 +73,6 @@ nav a {
   padding: 4px 10px;
   border-radius: 4px;
   background: #f0f0f0;
-}
-
-body.dark nav a {
-  background: #333;
-  color: #ccc;
 }
 
 nav a:hover {
@@ -136,7 +136,13 @@ body.dark .desc {
   padding: 16px;
 }
 
-/* Table */
+/* Section 3 — зображення */
+.demo-img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+/* Section 4 — Table */
 .table {
   border-collapse: collapse;
   width: 100%;
@@ -174,7 +180,7 @@ body.dark .desc {
 .input:focus {
   outline: none;
   border-color: #3a86ff;
-  box-shadow: 0 0 0 3px rgba(58,134,255,0.15);
+  box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.15);
 }
 
 /* Button — спільний клас */
@@ -194,7 +200,99 @@ body.dark .desc {
   transform: translateY(-1px);
 }
 
-/* DOM output */
+.btn-gray {
+  background: #888;
+  margin-left: 8px;
+}
+
+.btn-gray:hover {
+  background: #666;
+}
+
+/* Section 6 — Box Model */
+.box-outer {
+  background: #e8f0ff;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.box-border {
+  background: #fff;
+  border: 3px solid #3a86ff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 4px;
+}
+
+.box-padding {
+  background: #cfe2ff;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+/* Section 7 — Typography */
+.text-small {
+  font-size: 12px;
+  font-weight: 300;
+  color: #888;
+}
+
+.text-normal {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 8px 0;
+}
+
+.text-large {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Section 8 — Colors */
+.demo-colors {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.color-box {
+  padding: 15px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.color-red  { background-color: #e63946; }
+.color-blue { background-color: #3a86ff; }
+.color-green { background-color: #2d6a4f; color: #b7e4c7; }
+.color-grad { background: linear-gradient(to right, #f4a261, #e76f51); }
+
+/* Section 9 — Flexbox */
+.flex-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.flex-item {
+  background: #3a86ff;
+  color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.flex-item-tall {
+  padding: 30px 20px;
+}
+
+/* Section 11 — DOM output */
 #output {
   margin-top: 12px;
   display: flex;
@@ -212,6 +310,19 @@ body.dark .desc {
 
 body.dark #output p {
   background: #333;
+}
+
+/* Section 12 — explanation block */
+.explanation {
+  margin-top: 10px;
+  padding: 10px;
+  background: #e8f0ff;
+  border-radius: 6px;
+  border-left: 4px solid #3a86ff;
+}
+
+.hidden {
+  display: none;
 }
 
 /* Footer */
