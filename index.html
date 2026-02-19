@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лабораторна робота 1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Лабораторна робота 1</h1>
+    <p>HTML · CSS · JavaScript</p>
+  </header>
+
+  <nav>
+    <a href="#s1">Текст</a>
+    <a href="#s2">Списки</a>
+    <a href="#s3">Посилання</a>
+    <a href="#s4">Таблиці</a>
+    <a href="#s5">Форми</a>
+    <a href="#s6">Box Model</a>
+    <a href="#s7">Шрифти</a>
+    <a href="#s8">Кольори</a>
+    <a href="#s9">Flexbox</a>
+    <a href="#s10">Hover</a>
+    <a href="#s11">DOM</a>
+    <a href="#s12">Події</a>
+  </nav>
+
+  <main>
+
+    <section class="section" id="s1">
+      <h2>1. Теги тексту</h2>
+      <p class="desc">Теги h1–h3 задають заголовки. p — абзац. strong — жирний, em — курсив, br — новий рядок.</p>
+      <pre class="code"><code>&lt;h1&gt;Заголовок 1&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Жирний&lt;/strong&gt; та &lt;em&gt;курсив&lt;/em&gt;&lt;/p&gt;</code></pre>
+      <div class="demo">
+        <h1>Заголовок 1</h1>
+        <h2>Заголовок 2</h2>
+        <h3>Заголовок 3</h3>
+        <p><strong>Жирний текст</strong> та <em>курсивний текст</em></p>
+        <p>Перший рядок.<br>Другий рядок після br.</p>
+      </div>
+    </section>
+
+    <section class="section" id="s2">
+      <h2>2. Списки</h2>
+      <p class="desc">ul — маркований список, ol — нумерований. Обидва містять елементи li.</p>
+      <pre class="code"><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;Перший&lt;/li&gt;
+  &lt;li&gt;Другий&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+      <div class="demo">
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <ol>
+          <li>Відкрити редактор</li>
+          <li>Написати код</li>
+          <li>Зберегти файл</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="s3">
+      <h2>3. Посилання та зображення</h2>
+      <p class="desc">a — посилання, target="_blank" відкриває в новій вкладці. img — зображення, alt — опис для доступності.</p>
+      <pre class="code"><code>&lt;a href="https://google.com" target="_blank"&gt;Google&lt;/a&gt;
+&lt;img src="photo.jpg" alt="Опис фото" /&gt;</code></pre>
+      <div class="demo">
+        <a href="https://google.com" target="_blank">Відкрити Google</a>
+        <br><br>
+        <img src="https://picsum.photos/300/120" alt="Випадкове фото" style="max-width:100%;border-radius:6px;" />
+      </div>
+    </section>
+
+    <section class="section" id="s4">
+      <h2>4. Таблиці</h2>
+      <p class="desc">table — контейнер. tr — рядок. th — заголовок колонки. td — звичайна клітинка.</p>
+      <pre class="code"><code>&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Мова&lt;/th&gt;&lt;th&gt;Файл&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;HTML&lt;/td&gt;&lt;td&gt;index.html&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+      <div class="demo">
+        <table class="table">
+          <tr><th>Мова</th><th>Призначення</th><th>Файл</th></tr>
+          <tr><td>HTML</td><td>Структура</td><td>index.html</td></tr>
+          <tr><td>CSS</td><td>Стилі</td><td>style.css</td></tr>
+          <tr><td>JS</td><td>Інтерактивність</td><td>script.js</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="s5">
+      <h2>5. Форми</h2>
+      <p class="desc">form — контейнер форми. label — підпис поля. input — поле вводу. button — кнопка.</p>
+      <pre class="code"><code>&lt;form&gt;
+  &lt;label&gt;Ім'я:&lt;/label&gt;
+  &lt;input type="text" placeholder="Ваше ім'я" /&gt;
+  &lt;button&gt;Надіслати&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+      <div class="demo">
+        <form onsubmit="return false;">
+          <label>Ім'я:</label><br>
+          <input type="text" placeholder="Ваше ім'я" class="input" /><br><br>
+          <label>Email:</label><br>
+          <input type="email" placeholder="email@example.com" class="input" /><br><br>
+          <button class="btn">Надіслати</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="s6">
+      <h2>6. Box Model</h2>
+      <p class="desc">margin — відступ зовні. padding — відступ всередині. border — рамка навколо елемента.</p>
+      <pre class="code"><code>.box {
+  margin: 20px;
+  padding: 20px;
+  border: 3px solid #3a86ff;
+}</code></pre>
+      <div class="demo">
+        <div style="background:#e8f0ff; padding:20px; border-radius:6px; text-align:center;">
+          margin
+          <div style="background:#fff; border:3px solid #3a86ff; padding:20px; margin:10px; border-radius:4px;">
+            border
+            <div style="background:#cfe2ff; padding:15px; border-radius:4px;">
+              padding → <strong>Контент</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="s7">
+      <h2>7. Шрифти (Typography)</h2>
+      <p class="desc">font-size — розмір шрифту. font-weight — товщина (400 = звичайний, 700 = жирний). line-height — висота рядка.</p>
+      <pre class="code"><code>.малий   { font-size: 12px; font-weight: 300; }
+.середній { font-size: 16px; font-weight: 400; }
+.великий  { font-size: 28px; font-weight: 700; }</code></pre>
+      <div class="demo">
+        <p style="font-size:12px; font-weight:300; color:#888;">12px · font-weight 300 — маленький текст</p>
+        <p style="font-size:16px; font-weight:400; margin:8px 0;">16px · font-weight 400 — звичайний текст</p>
+        <p style="font-size:28px; font-weight:700;">28px · font-weight 700 — великий жирний</p>
+      </div>
+    </section>
+
+    <section class="section" id="s8">
+      <h2>8. Кольори та фон</h2>
+      <p class="desc">color — колір тексту. background-color — фон елемента. linear-gradient() — градієнт.</p>
+      <pre class="code"><code>.червоний { background-color: #e63946; color: white; }
+.синій    { background-color: #3a86ff; color: white; }
+.градієнт { background: linear-gradient(to right, #f4a261, #e76f51); }</code></pre>
+      <div class="demo" style="display:flex; gap:10px; flex-wrap:wrap;">
+        <div style="background:#e63946; color:#fff; padding:15px; border-radius:6px;">#e63946</div>
+        <div style="background:#3a86ff; color:#fff; padding:15px; border-radius:6px;">#3a86ff</div>
+        <div style="background:#2d6a4f; color:#b7e4c7; padding:15px; border-radius:6px;">#2d6a4f</div>
+        <div style="background:linear-gradient(to right,#f4a261,#e76f51); color:#fff; padding:15px; border-radius:6px;">gradient</div>
+      </div>
+    </section>
+
+    <section class="section" id="s9">
+      <h2>9. Flexbox</h2>
+      <p class="desc">display: flex розташовує елементи в рядок. gap — відступ між ними. justify-content і align-items — вирівнювання.</p>
+      <pre class="code"><code>.container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}</code></pre>
+      <div class="demo">
+        <div style="display:flex; gap:10px; justify-content:center; align-items:center; background:#f0f0f0; padding:20px; border-radius:6px;">
+          <div style="background:#3a86ff; color:#fff; padding:20px; border-radius:6px;">A</div>
+          <div style="background:#3a86ff; color:#fff; padding:30px 20px; border-radius:6px;">B</div>
+          <div style="background:#3a86ff; color:#fff; padding:20px; border-radius:6px;">C</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="s10">
+      <h2>10. Псевдокласи (:hover, :focus)</h2>
+      <p class="desc">:hover спрацьовує при наведенні миші. :focus — коли елемент активний (поле вводу у фокусі).</p>
+      <pre class="code"><code>.btn:hover {
+  background: #0056d6;
+}
+input:focus {
+  border-color: #3a86ff;
+}</code></pre>
+      <div class="demo">
+        <p>Наведи мишку на кнопку або клікни на поле:</p><br>
+        <button class="btn">Наведи на мене</button>
+        &nbsp;
+        <input type="text" placeholder="Клікни сюди (focus)" class="input" />
+      </div>
+    </section>
+
+    <section class="section" id="s11">
+      <h2>11. Додавання контенту (DOM)</h2>
+      <p class="desc">JavaScript створює нові елементи через createElement і додає їх на сторінку через appendChild.</p>
+      <pre class="code"><code>document.getElementById("addBtn").onclick = function() {
+  const p = document.createElement("p");
+  p.textContent = "Новий елемент!";
+  document.getElementById("output").appendChild(p);
+};</code></pre>
+      <div class="demo">
+        <button class="btn" id="addBtn">Додати текст</button>
+        <button class="btn" id="clearBtn" style="background:#888; margin-left:8px;">Очистити</button>
+        <div id="output"></div>
+      </div>
+    </section>
+
+    <section class="section" id="s12">
+      <h2>12. Події та зміна стилю</h2>
+      <p class="desc">addEventListener слухає кліки. classList.toggle додає або видаляє CSS-клас, змінюючи вигляд сторінки.</p>
+      <pre class="code"><code>document.getElementById("themeBtn").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});</code></pre>
+      <div class="demo">
+        <button class="btn" id="themeBtn">🌙 Перемкнути тему</button>
+        <br><br>
+        <button class="btn" id="toggleBtn" style="background:#888;">Показати пояснення</button>
+        <div id="explanation" style="display:none; margin-top:10px; padding:10px; background:#e8f0ff; border-radius:6px; border-left:4px solid #3a86ff;">
+          Цей блок був прихований через <code>display: none</code>. JavaScript змінив його на <code>display: block</code>!
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <a href="#top">↑ Вгору</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
